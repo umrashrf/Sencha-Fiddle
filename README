@@ -1,1 +1,9 @@
-THe code is self explanatory and it's just tested on Chrome right now. It must work on other browsers as well.
+THe code is self explanatory and it's just tested on Chrome right now. It must work on other browsers as well but because Sencha Touch works on webkit browsers, stick to Chrome browser.
+
+Setup
+
+It's using MySQL database. There is a db.sql file which is exported with phpmyadmin.
+
+You can find js/code.js file and find BASE_URL globale variable which is needed for the app to call web services.
+
+You can find server/common/config.inc.php to change database settings.
