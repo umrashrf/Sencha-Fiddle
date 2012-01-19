@@ -101,20 +101,20 @@
                 echo json_encode($response);
             }
             else {
-                $response = array("senchafiddle" => array("error" => "Login failed."));
+                $response = array("senchafiddle" => array("error" => "Please check username and password."));
                 echo json_encode($response);                
             }
 
             $db->close();
         }
         elseif (strtolower($action) == "logout") {
-            if (!isset($_POST["token"])) {
+            if (!isset($_POST["user_token"])) {
                 $error = array("senchafiddle" => array("error" => "Valid token is required."));
                 echo json_encode($error);
                 exit(0);        
             }
 
-            $token = $_POST["token"];
+            $token = $_POST["user_token"];
 
             $db->connect();
             $user = $db->query_first("SELECT uid FROM user_tokens WHERE token = '$token'");

@@ -52,6 +52,11 @@
         $name = $_POST["name"];        
         $type = $_POST["type"];        
         $content = $_POST["content"];        
+		$is_default = 0;
+		
+		if (isset($_POST["is_default"])) {
+			$is_default=  $_POST["is_default"];
+        }
 
         $db->connect();
         $app = $db->query_first("SELECT state FROM apps WHERE id = $app_id");
@@ -78,7 +83,7 @@
                 }
             }
             else {
-                $inserted = $db->query_insert("files", array("appid" => $app_id, "name" => $name, "type" => $type, "content" => $content, "lastupdate" => 'CURRENT_TIMESTAMP'));
+                $inserted = $db->query_insert("files", array("appid" => $app_id, "name" => $name, "type" => $type, "content" => $content, "isdefault" => $is_default, "lastupdate" => 'CURRENT_TIMESTAMP'));
 
                 if (!$inserted) {
                     $error = array("senchafiddle" => array("error" => mysql_errno()));

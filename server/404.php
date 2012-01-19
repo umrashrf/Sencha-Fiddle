@@ -1,25 +1,34 @@
 <?php
-    error_reporting(0);
-    
-    // example URI: http://domain.com/full/ahGNs
-    $request = $_SERVER['REQUEST_URI'];
+error_reporting(0);
 
-    $matches = array();
-    if (preg_match("#/full/([a-zA-Z\d]+)#", $request, $matches)) {
-        file_put_contents("404.txt", $request);
-    
-        if (count($matches) >= 2) {
-            $token = $matches[1];
+// example URI: http://domain.com/full/ahGNs
 
-            $newplace = "http://" . $_SERVER['HTTP_HOST'] . "/server/full.php?token=" . $token; 
+$local_base = "/local/v10/";
+$server_base = "/";
 
-            header("HTTP/1.0 301 Moved Permanently"); 
-            //header("Title: $newplace"); 
-            header("Location: $newplace"); 
-            header("Connection: close"); 
-            exit();   
-        }                       
-    }
+$base = $local_base;
 
-    header("HTTP/1.0 404 Not Found");
+$request = $_SERVER['REQUEST_URI'];
+
+$matches = array();
+if (preg_match("#" . $base . "full/([a-zA-Z\d]+)/([a-zA-Z\d]+)#", $request, $matches) || preg_match("#" . $base . "full/([a-zA-Z\d]+)#", $request, $matches)) {
+	if (count($matches) >= 2) {
+		$app_token = $matches[1];
+
+		$user_token = "";
+		if (isset($matches[2])) {
+			$user_token = $matches[2];
+		}
+
+		$newplace = "http://" . $_SERVER['HTTP_HOST'] . $base . "server/full?app_token=" . $app_token . "&user_token=" . $user_token;
+
+		header("HTTP/1.0 301 Moved Permanently");
+		//header("Title: $newplace");
+		header("Location: $newplace");
+		header("Connection: close");
+		exit();
+	}
+}
+
+header("HTTP/1.0 404 Not Found");
 ?>

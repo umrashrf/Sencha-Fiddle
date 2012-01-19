@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 31, 2011 at 11:26 AM
+-- Generation Time: Jan 19, 2012 at 03:20 PM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -30,9 +30,10 @@ CREATE TABLE IF NOT EXISTS `apps` (
   `name` varchar(150) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `state` varchar(15) NOT NULL DEFAULT 'Draft',
+  `version` float NOT NULL DEFAULT '1.1',
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -51,6 +52,19 @@ CREATE TABLE IF NOT EXISTS `app_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `feedbacks`
+--
+
+CREATE TABLE IF NOT EXISTS `feedbacks` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `comments` varchar(1000) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `files`
 --
 
@@ -60,10 +74,11 @@ CREATE TABLE IF NOT EXISTS `files` (
   `name` varchar(50) NOT NULL,
   `type` varchar(10) NOT NULL,
   `content` longtext NOT NULL,
+  `isdefault` int(11) NOT NULL DEFAULT '0',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `lastupdate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -80,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastlogin` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
