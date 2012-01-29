@@ -1,0 +1,6 @@
+/* This file is inserted into index.html as is after sencha-touch.css */
+.fbPanel
+{
+    text-align:center;
+    margin-top: 0.8em;
+}
