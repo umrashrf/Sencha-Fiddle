@@ -697,7 +697,7 @@
 			},
 			success : function(result) {
 				// if result say yes so
-
+					
 				//file.id = result.senchafiddle.file.id;
 				file.updated = result.senchafiddle.file.updated;
 
@@ -830,6 +830,17 @@
 		controller.name = "Controller " + (rf.length + 1) + ".js";
 
 		this.addFile(controller);
+	};
+
+	this.addViewFile = function() {
+		// ask file name
+
+		var view = new this.File("View", this.FileTypes.View, "");
+
+		var rf = this.files.findByType(this.FileTypes.View);
+		view.name = "View " + (rf.length + 1) + ".js";
+
+		this.addFile(view);
 	};
 	/*
 	 add file to the fiddle
@@ -1424,6 +1435,7 @@
 		Viewport : 'Viewport',
 		Model : 'Model',
 		Store : 'Store',
+		View : 'View',
 		Controller : 'Controller'
 	};
 

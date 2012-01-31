@@ -564,6 +564,10 @@ input.button {
 .footer .footerWrapper .columns ul.parent li.pItem:hover ul.subMenu {
 	bottom: 42px;
 }
+.footer .footerWrapper .columns ul.parent li.pItem:hover ul.subMenu.tabsContainer {
+	overflow: auto;
+	max-height: 250px;
+}
 .footer .footerWrapper .columns ul.parent li.pItem ul.subMenu li, .contextMenu ul.subMenu li {
 	float: none;
 	padding: 0;
