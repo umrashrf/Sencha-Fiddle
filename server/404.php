@@ -1,17 +1,11 @@
 <?php
-error_reporting(0);
-
-// example URI: http://domain.com/full/ahGNs
-
-$local_base = "/local/v10/";
-$server_base = "/";
-
-$base = $local_base;
+require ("common/config.inc.php");
 
 $request = $_SERVER['REQUEST_URI'];
-
 $matches = array();
-if (preg_match("#" . $base . "full/([a-zA-Z\d]+)/([a-zA-Z\d]+)#", $request, $matches) || preg_match("#" . $base . "full/([a-zA-Z\d]+)#", $request, $matches)) {
+
+// example URI: http://domain.com/full/[user_token]/[app_token]/[file|folder]...
+if (preg_match("#" . BASE_URL . "full/([a-zA-Z\d]+)/([a-zA-Z\d]+)#", $request, $matches) || preg_match("#" . BASE_URL . "full/([a-zA-Z\d]+)#", $request, $matches)) {
 	if (count($matches) >= 2) {
 		$app_token = $matches[1];
 
@@ -20,7 +14,7 @@ if (preg_match("#" . $base . "full/([a-zA-Z\d]+)/([a-zA-Z\d]+)#", $request, $mat
 			$user_token = $matches[2];
 		}
 
-		$newplace = "http://" . $_SERVER['HTTP_HOST'] . $base . "server/full?app_token=" . $app_token . "&user_token=" . $user_token;
+		$newplace = "http://" . $_SERVER['HTTP_HOST'] . BASE_URL . "server/full?app_token=" . $app_token . "&user_token=" . $user_token;
 
 		header("HTTP/1.0 301 Moved Permanently");
 		//header("Title: $newplace");

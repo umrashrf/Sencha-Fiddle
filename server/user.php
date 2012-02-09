@@ -1,8 +1,8 @@
 <?php
     error_reporting(0);
 
-    require("common/Database.php");
     require("common/config.inc.php");
+    require("common/Database.php");
     require("common/utility.php");
 
     $db = new Database(DB_SERVER, DB_USER, DB_PASS, DB_DATABASE);

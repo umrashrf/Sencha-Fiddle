@@ -19,10 +19,6 @@
 		<script src="lib/jquery.cookies.min.js" type="text/javascript"></script>
 		<script src="js/code.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			if(window.location.host.indexOf("www.") === 0) {
-				window.location = "http://" + window.location.host.substr(4);
-			}
-
 			var SF = null;
 			$(document).ready(function() {
 				SF = new SenchaFiddle($);
@@ -570,7 +566,7 @@
 				<div class="dialogBoxInnerWrapper">
 					<div class="dialogBoxContainer">
 						<div class="desc">
-							<a id="btnVersionST2" class="button btnVersion">Sencha Touch 2.0 (PR4)</a>
+							<a id="btnVersionST2" class="button btnVersion">Sencha Touch 2.0 (Beta 1)</a>
 							<br />
 							<a id="btnVersionST1_1" class="button btnVersion">Sencha Touch 1.1</a>
 						</div>

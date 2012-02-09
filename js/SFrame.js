@@ -2,10 +2,10 @@
 	var that = this;
 
 	// local
-	//this.BaseURL = 'http://local.senchafiddle.com/local/v8/';
+	this.BaseURL = 'http://local.senchafiddle.com/local/v8/';
 
 	// server
-	this.BaseURL = 'http://senchafiddle.com/';
+	//this.BaseURL = 'http://senchafiddle.com/';
 
 	this.ProxyURL = this.BaseURL + 'server/proxy.php?url=';
 
@@ -17,6 +17,9 @@
 	};
 
 	this.informLoad = function() {
-		window.parent.SF.onAppViewLoadComplete();
+		try {
+			window.parent.SF.onAppViewLoadComplete();
+		} catch(ex) {
+		}
 	};
 }

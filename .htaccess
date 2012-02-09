@@ -1,1 +1,11 @@
-ErrorDocument 404 /local/v10/server/404.php
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^senchafiddle\.com$
+RewriteRule (.*) http://www.senchafiddle.com/$1 [R=301,L]
+
+RewriteRule ^full/!([a-zA-Z0-9]+)/!([a-zA-Z0-9]+)/$ server/full.php?user_token=$1&app_token=$2
+RewriteRule ^full/!([a-zA-Z0-9]+)/!([a-zA-Z0-9]+)/(.*)$ server/full.php?user_token=$1&app_token=$2&path=$3
+
+RewriteRule ^full/!([a-zA-Z0-9]+)/$ server/full.php?app_token=$1
+RewriteRule ^full/!([a-zA-Z0-9]+)/(.*)$ server/full.php?app_token=$1&path=$2

@@ -6,10 +6,8 @@
     post params: according to get "action" param: [state], [app_token], [app_token]
     */
 
-    error_reporting(0);
-
-    require("common/Database.php");
     require("common/config.inc.php");
+    require("common/Database.php");
     $db = new Database(DB_SERVER, DB_USER, DB_PASS, DB_DATABASE);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

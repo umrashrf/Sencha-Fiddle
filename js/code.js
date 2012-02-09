@@ -2,10 +2,10 @@
 	var that = this;
 
 	// local
-	this.BaseURL = 'http://local.senchafiddle.com/local/v10/';
+	//this.BaseURL = 'http://local.senchafiddle.com/local/v11/';
 
 	// server
-	//this.BaseURL = 'http://senchafiddle.com/';
+	this.BaseURL = 'http://www.senchafiddle.com/';
 
 	this.init = function() {
 		this.ui = {
@@ -548,10 +548,11 @@
 		SF.ui.btnRun.removeClass("disabled").addClass("disabled");
 
 		SF.afterSyncCycle = function() {
-			var appURL = SF.BaseURL + "full/" + SF.currentApp.token;
+			var appURL = SF.BaseURL + "full/";
 			if(SF.User.loggedIn()) {
-				appURL += "/" + SF.User.getToken();
+				appURL += "!" + SF.User.getToken() + "/";
 			}
+			appURL += "!" + SF.currentApp.token + "/";
 
 			SF.ui.appView.attr("src", appURL);
 
@@ -697,7 +698,7 @@
 			},
 			success : function(result) {
 				// if result say yes so
-					
+
 				//file.id = result.senchafiddle.file.id;
 				file.updated = result.senchafiddle.file.updated;
 
@@ -762,8 +763,8 @@
 
 			// put 3 share links here
 			SF.ui.txtShareLink.val(SF.BaseURL + "#" + SF.currentApp.token);
-			SF.ui.txtFullShareLink.val(SF.BaseURL + "full/" + SF.currentApp.token);
-			SF.ui.txtIframeShareLink.val('<iframe src="' + SF.BaseURL + 'full/' + SF.currentApp.token + '"></iframe>');
+			SF.ui.txtFullShareLink.val(SF.BaseURL + "full/!" + SF.currentApp.token + "/");
+			SF.ui.txtIframeShareLink.val('<iframe src="' + SF.BaseURL + 'full/!' + SF.currentApp.token + '/"></iframe>');
 
 			var li = SF.ui.btnShare.parent();
 			if(li.hasClass("active")) {
