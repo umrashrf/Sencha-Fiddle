@@ -1,0 +1,30 @@
+{
+	'success': true,
+	'results': [
+		{
+			'type': 'App',
+			'version': '2.0',
+			'content': 'Ext.Loader.setConfig({\n    enabled : true\n});\n\nExt.application({\n    name : (\'SF\' || \'SenchaFiddle\'),\n    \n    launch : function() {\n        Ext.create(\'Ext.Panel\', {\n            fullscreen : true,\n            html : \'Hello from your first Sencha Touch App made by Sencha Fiddle.\'\n        });\n    }\n});'
+		}, {
+			'type': 'CSS',
+			'version': '2.0',
+			'content': '/* This file is inserted into index.html as is after sencha-touch.css */\n'
+		}, {
+			'type': 'Model',
+			'version': '2.0',
+			'content': 'Ext.define(\'SF.model.NameModel\', {\n    extend : \'Ext.data.Model\',\n    \n    config : {\n        fields : [{\n            name  : \'field1\',\n            type : \'int\'\n        }, {\n            name  : \'field2\',\n            type : \'string\'\n        }]\n    }\n});'
+		}, {
+			'type': 'Store',
+			'version': '2.0',
+			'content': 'Ext.define(\'SF.store.NameStore\', {\n    extend : \'Ext.data.Store\',\n    \n    model : \'NameModel\',\n    proxy : {\n        type : \'ajax\',\n        url : \'http://domain.com/data.json\',\n        reader : {\n            type : \'json\',\n            root : \'results\'\n        }\n    },\n    autoLoad : false\n});'
+		}, {
+			'type': 'View',
+			'version': '2.0',
+			'content': 'Ext.define(\'SF.view.NameView\', {\n    extend : \'Ext.component.Component\',\n    \n    config : {\n        cls : \'custom-cmp\',\n        html : \'This is a test component.\'\n    }\n});'
+		}, {
+			'type': 'Controller',
+			'version': '2.0',
+			'content': 'Ext.define(\'SF.controller.NameController\', {\n    extend : \'Ext.app.Controller\',\n    \n    config : {\n        refs : {\n            nav : \'#mainNav\'\n        }\n    },\n    \n    addLogoutButton : function() {\n        this.getNav().add({\n            text : \'Logout\'\n        });\n    }\n});'
+		}
+	]
+}

@@ -1,0 +1,365 @@
+.x-panel-body-default {
+	border: none;
+	background: transparent;
+}
+
+body {
+	background: #064B79 url(../img/browse_stage_noise.png) center;
+	font-family: Arial !important;
+	font-size: 12px;
+	color: #333;
+}
+
+.tipbar {
+	background: #000000;
+}
+
+.tip, .tip .x-btn-inner {
+	color: #FFFFFF;
+	font-size: 11px;
+	font-family: Arial;
+	border: none;
+}
+
+.button {
+	margin: 0px 5px;
+	padding: 6px 7px;
+	border: 1px solid #043C61;
+	box-shadow: 0px 1px 1px #043C61;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	background: #F2F2F2 url(../img/button.png) repeat-x center 0px;
+}
+
+.button .x-btn-inner {
+	color: #516F83;
+	color: #07537F;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+
+.button:hover {
+	background: white url(../img/button.png) repeat-x center -28px;
+}
+
+.button.x-item-disabled {
+	background: #F2F2F2;
+	color: #757575;
+	border-color: #F2F2F2;
+}
+
+.button.tip {
+	margin: 0 2px;
+	padding: 0 4px;
+	background: #FFFFFF;
+	border-radius: 2px;
+	border: none;
+	border-width: 0;
+}
+
+.button.tip .x-btn-inner {
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.tip.tipText {
+	background: none;
+}
+
+.logo {
+	background: #043455;
+	background-color: rgba(0, 0, 0, 0.3);
+	border: 1px solid transparent;
+	border-bottom: 1px solid #02253C;
+	box-shadow: 0px 1px 1px #043C61;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0 10px;
+	margin-right: 15px;
+}
+
+.logo .x-btn-arrow {
+	padding-right: 0;
+}
+
+.logo .x-btn-inner {
+	color: #FFFFFF;
+	font-size: 22px;
+	font-weight: bold;
+	font-family: Arial;
+	text-shadow: 0px 1px 1px black;
+}
+
+.logo .sf {
+	width: 35px;
+}
+
+.logo .bottomArrow {
+
+}
+
+.x-menu {
+	background: white;
+	border: 1px solid #043C61;
+	border-radius: 0 0 3px 3px;
+}
+
+.x-menu .x-menu-body {
+	padding: 0;
+}
+
+.x-menu div {
+	border: none;
+	background: transparent !important;
+	margin: 0;
+}
+
+.x-menu .x-menu-item .x-menu-item-link {
+	border: none;
+	border-radius: 0;
+	margin: none;
+	font-size: 15px;
+	box-shadow: none;
+	margin: 0;
+	padding: 8px 10px;
+}
+
+.x-menu .x-menu-item.x-menu-item-active .x-menu-item-link:hover, .x-menu .x-menu-item.x-menu-item-active .x-menu-item-link {
+	background: #F2F2F2;
+}
+
+.x-menu .x-menu-item .x-menu-item-text, .x-menu .x-menu-item.x-menu-item-active .x-menu-item-text {
+	color: #07537F;
+	font-size: 15px;
+}
+
+.x-menu.upsideDown {
+	border-radius: 3px 3px 0 0;
+	border-bottom: none;
+}
+
+.x-menu.tabList {
+}
+
+.button.share.x-menu-active {
+	background: #FFFFFF;
+	padding-bottom: 10px;
+	border-radius: 3px 3px 0px 0px;
+	border-bottom-color: #FFFFFF;
+	box-shadow: none;
+}
+
+.shareBox {
+	padding: 6px 8px;
+	border-top: none;
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+}
+
+.shareBox .x-menu-body {
+	padding: 6px 8px;
+	background: #FFFFFF !important;
+}
+
+.shareBox .x-box-inner {
+	background: #FFFFFF;
+}
+
+.shareBox .shareText {
+	font-style: normal;
+	font-size: 11px;
+	color: #757575;
+	margin-bottom: 3px;
+}
+
+.shareBox .shareField {
+}
+
+.shareBox .shareField .x-form-field {
+	padding: 16px 8px;
+	border: 1px solid #D8D8D8;
+	font-size: 14px;
+	background: #FFFFFF;
+	color: #757575;
+}
+
+.button.x-menu-active {
+	background: #FFFFFF;
+}
+
+.button.x-menu-active, .tab.x-menu-active {
+	border-radius: 0 0 3px 3px;
+}
+
+.break1 {
+	height: 5px;
+}
+
+.icon {
+	background-image: url(../img/icons/sprite.png);
+}
+
+.icon.sf {
+	background-image: url(../img/logo-icon.png);
+}
+
+.icon.run {
+	background-position: 0px center;
+}
+
+.icon.save {
+	background-position: -64px center;
+}
+
+.icon.beautify {
+	background-position: -80px center;
+}
+
+.icon.share {
+	background-position: -96px center;
+}
+
+.icon.download {
+	background-position: -304px center;
+}
+
+.icon.rightArrow {
+	background-position: -160px center;
+}
+
+.icon.bottomArrow.white {
+	background-position: -272px 55%;
+}
+
+.icon.leftArrow {
+	background-position: -192px center;
+}
+
+.icon.add {
+	background-position: -208px center;
+}
+
+.icon.page {
+	background-position: -224px center;
+}
+
+.editorContainer:nth-child(2n+1) {
+	border-radius: 3px;
+	background-color: #FFFFFF;
+}
+
+textarea.editorContainer {
+
+}
+
+.tab {
+	margin: 0 5px;
+	padding: 6px 10px;
+	background: #05436D;
+	border: 1px solid #043D62;
+	border-radius: 3px;
+}
+
+.tab:hover .x-btn-inner {
+	color: #FFFFFF;
+}
+
+.tab .x-btn-inner {
+	padding: 0;
+	color: #A9D0F5;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.tab.active {
+	background: white;
+	border: 1px solid #043C61;
+}
+
+.tab.active .x-btn-inner {
+	color: #07537F;
+}
+
+.floating-panel {
+	background: white;
+	border: 1px solid #043C61;
+	box-shadow: 0px 1px 1px #043C61;
+	border-radius: 3px;
+}
+
+.floating-panel .floating-panel-toolbar {
+	padding: 10px;
+	background: #F2F2F2;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.floating-panel .floating-panel-toolbar h3 {
+	color: #07537F;
+	font-size: 1.17em;
+	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+.floating-panel input[type=text], .floating-panel textarea {
+	padding: 15px 8px;
+	border: 1px solid #D8D8D8;
+	background: white;
+}
+
+.x-window {
+	background: white;
+	border: 1px solid #043C61;
+	box-shadow: 0px 1px 1px #043C61;
+}
+
+.x-window-header {
+	padding: 10px;
+	background: #F2F2F2;
+}
+
+.x-window-header-text {
+	color: #07537F;
+	font-size: 1.17em;
+	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+
+.x-tool {
+	display: none;
+}
+
+.x-message-box .x-window-body {
+	background-color: white;
+}
+
+.x-toolbar .x-btn {
+	top: -1px !important;
+	margin: 1px 5px !important;
+	padding: 6px 7px;
+	border: 1px solid #043C61;
+	box-shadow: 0px 1px 1px #043C61;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	background: #F2F2F2 url(../img/button.png) repeat-x center 0px;
+}
+
+.x-toolbar .x-btn .x-btn-inner {
+	color: #07537F;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+
+.x-toolbar .x-btn:hover {
+	background: white url(../img/button.png) repeat-x center -28px;
+}
+
+.x-toolbar .x-btn.x-item-disabled {
+	background: #F2F2F2;
+	color: #757575;
+	border-color: #F2F2F2;
+}

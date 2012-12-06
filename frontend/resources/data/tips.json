@@ -1,0 +1,21 @@
+{
+	'success': true,
+	'results': [
+		{
+			'id': 1,
+			'title': 'Did you know you can use <b>SF.proxy(URL)</b> function to call Cross Domain XHR?',
+			'content': '<b>Parameters</b>: URL (string) - The url you want to send request to.<br /><b>Returns</b>: URL (string) - Proxified string that can be called on cross domains.',
+			'created': ''
+		}, {
+			'id': 2,
+			'title': 'Did you know you can write <b>CSS</b> in the fiddle now?',
+			'content': '<b>Note</b>: The CSS support in the fiddle is right now basic so please don\'t think it SCSS where Compass is needed to compile.',
+			'created': ''
+		}, {
+			'id': 3,
+			'title': 'Did you know you can <b unselectable="on">download app package</b> from the fiddle now?',
+			'content': '<b unselectable="on">Note</b>: The fiddle lets you download app package in zip format now. Some browsers doesn\'t let us name the file properly so please don\'t forget to properly name the file e.g, <b unselectable="on">your_app.zip</b>',
+			'created': ''
+		}
+	]
+}
